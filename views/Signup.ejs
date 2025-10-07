@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <%- include("./Partial/Head") %>
+</head>
+<body class="bg-secondary ">   
+    <h1 class="text-center">Siginup</h1>
+<!-- 
+   <form action="/register" method="post">
+    <label for="">Name</label>
+    <input type="text" name="NAMES" id="">
+
+ <label for="">Email</label>
+    <input type="text" name="emails" id="">
+ <label for="">Password</label>
+    <input type="text" name="password" id="">
+
+
+<button type="submit">Sumbit</button>
+</form>
+<div>
+    <p>If you  have accout <a href="/register/login">Signin</a></p>
+</div> -->
+
+<form class="row g-3 my-3 mx-3" action="/register" method="post">
+    <div class="col-md-3">
+    <label for="inputEmail4" class="form-label">Name</label>
+    <input type="text" name="NAMES" required class="form-control" id="inputEmail4">
+  </div>
+  <div class="col-md-4">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control" required name="emails" id="inputEmail4">
+  </div>
+  <div class="col-md-3">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control" required name="password" id="inputPassword4">
+  </div>
+  
+  <div class="col-12 ms-3 mt-3 ">
+    <button type="submit" class="btn btn-info">Sign Up</button>
+  </div>
+</form>
+<div class="ms-3 mt-3">
+    <p>If you have accout <a href="/register/login" class="text-dark">Login</a></p>
+</div>
+</body>
+ <%- include("./Partial/Server") %>
+</html>

@@ -1,0 +1,14 @@
+.title{
+    margin: auto;
+    height:10%;
+}
+.flex{
+    display: flex;
+}
+.rounder{
+    border: 2px solid red;
+    border-radius: 50%;
+}
+.width{
+    width: 50%;
+}

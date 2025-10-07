@@ -1,0 +1,14 @@
+<div class="row">
+ 
+  <% blogss?.forEach(element => { %>
+    <div class="col-md-4 col-sm-6 mb-4 "> 
+      <div class="card mx-2">
+        <img src="<%= element.imgFile %>" style="width: 50%" class="card-img-top title" alt="Blog Image">
+        <div class="card-body">
+          <h5 class="card-title"><%= element.Title %></h5>
+         <a href="/blogs/<%= element._id %>"   type="button"  class="btn btn-primary">Primary</a>
+        </div>
+      </div>
+    </div>
+  <% }) %>
+</div>

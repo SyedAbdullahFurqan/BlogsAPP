@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <%- include("./Partial/Head") %>
+</head>
+<body class="bg-secondary">
+   
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
+        </li>
+
+          <a class="nav-link" href="/register/home">Blogs</a>
+        </li>
+     
+      
+         <!-- <li class="nav-item">
+          <a class="nav-link" href="/register/signup">Regiter</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link" href="/register/login">Login</a>
+        </li>    -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+       
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/register/logout">Logout</a></li>
+           
+         
+          </ul>
+        </li>
+       
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+      
+
+
+
+
+
+
+    <h1 class="text-center">Add Images</h1>
+
+<!-- <img src="drizzle (1).png" alt="" srcset="">
+    <form action="/img" method="post" enctype="multipart/form-data">
+
+
+
+<input type="file" name="imgFile" id="">
+<label for="">Title</label>
+<input type="text" name="Title">
+<label for="">Desciption</label>
+<textarea name="description" id="" cols="30" rows="10"></textarea>
+<button type="submit">Upload</button>
+    </form> -->
+
+<form class="row g-3 my-3 mx-3" action="/img" method="post" enctype="multipart/form-data">
+    <div class="col-md-3">
+    <label for="inputEmail4" class="form-label text-light">Add Image</label>
+    <input type="file" name="imgFile"  class="form-control" required  id="">
+  </div>
+  <div class="col-md-4">
+    <label for="inputEmail4" class="form-label text-light">Title</label>
+    <input  type="text" name="Title" class="form-control" required  id="inputEmail4">
+  </div>
+  <div class="col-md-3">
+    <label for="inputPassword4" class="form-label text-light">Descirption</label>
+    
+    <textarea name="description" id="" cols="20" rows="10"></textarea>
+  </div>
+  
+  <div class="col-12 ms-3 mt-3 ">
+    <button type="submit" class="btn btn-info">Sign Up</button>
+  </div>
+</form>
+</body>
+ <%- include("./Partial/Server") %>
+</html>

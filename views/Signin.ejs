@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <%- include("./Partial/Head") %>
+</head>
+
+<body class=" bg-secondary">
+    <h1 class="text-center">Signin</h1>
+
+
+   <!-- <form action="/register/logins" method="post">
+
+
+ <label for="">Email</label>
+    <input type="text" name="emails" id="">
+ <label for="">Password</label>
+    <input type="text" name="password" id="">
+
+
+
+<button type="submit">Sumbit</button> -->
+
+
+<form class="row g-3 my-3 mx-3 " action="/register/logins" method="post">
+  <div class="col-md-6">
+    <label for="inputEmail4" class="form-label">Email</label>
+    <input type="email" class="form-control"  name="emails" id="inputEmail4">
+  </div>
+  <div class="col-md-6">
+    <label for="inputPassword4" class="form-label">Password</label>
+    <input type="password" class="form-control"  name="password" id="inputPassword4">
+  </div>
+  
+  <div class="col-12 ms-3 mt-3 ">
+    <button type="submit" class="btn btn-info">Sign in</button>
+  </div>
+</form>
+<div class="ms-3 mt-3">
+    <p>If you dont have accout <a href="/register/signup" class="text-dark">Register</a></p>
+</div>
+</body>
+ <%- include("./Partial/Server") %>
+</html>
