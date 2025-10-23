@@ -1,8 +1,8 @@
 const express = require("express");
-
+require('dotenv').config();
  const app= express()
 
-const Port=5000
+const Port=process.env.Port 
 const path= require("path")
 
 const route =require("./routes/Userss.js")
@@ -14,7 +14,7 @@ const { check } = require("./middleware/Auth.js");
 const Blogs = require("./models/Blogs.js");
 const Comments = require("./models/Comment.js");
 
-mongoose.connect("mongodb://localhost:27017/blogs").then(()=> console.log("connectd")).catch((err)=>{ console.log(err,+"error")})
+ mongoose.connect(process.env.Mongodb).then(()=> console.log("connectd")).catch((err)=>{ console.log(err,+"error")})
 
 app.set("view engine","ejs")
 app.set("views",path.resolve("./views"))
@@ -30,7 +30,7 @@ app.use("/register",route)
 app.use(check('tookens'))
 app.get("/", async(req,res)=>{
 
-const Blogss= await Blogs.find({})
+const Blogss= await Blogs.find({}).populate("createdBy");
 
  return  res.render("Front",{
 users :req.user , // make user available to all ejs

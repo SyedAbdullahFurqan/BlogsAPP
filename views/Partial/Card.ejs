@@ -5,8 +5,11 @@
       <div class="card mx-2">
         <img src="<%= element.imgFile %>" style="width: 50%" class="card-img-top title" alt="Blog Image">
         <div class="card-body">
-          <h5 class="card-title"><%= element.Title %></h5>
-         <a href="/blogs/<%= element._id %>"   type="button"  class="btn btn-primary">Primary</a>
+          <h5 class="card-title"> Title : <%= element.Title %></h5>
+   <p style="display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; text-transform: capitalize;">
+ Descirption :  <%= element.description %>
+</p>
+         <a href="/blogs/<%= element._id %>"   type="button"  class="btn btn-primary">ReadMore</a>
         </div>
       </div>
     </div>

@@ -26,19 +26,20 @@
 
    <form action="/comments/<%= vlogss._id %>" method="post">
 
-<input type="text" name="Content" placeholder="comments" class="width">
-   <button type="submit">Add</button>
+<input type="text" name="Content" placeholder="comments">
+   <button type="submit" class="">Add</button>
    </form>
    <div class="flex mt-4">
  
 <% commentss.forEach(data => { %>
 
  <img src="<%= data.blogID.createdBy.imges %>"    class="rounder"  width="100px" height="100px" alt="">
-<h5 class="flex"><%= data.userID.NAMES%></p></h5>
 
 
 </div>
- <p class="ms-4 mt-2"><%= data.Content %></p>
+<h5 class="flex"><%= data.userID.NAMES%></h5>
+
+ <p class="ms-4"><%= data.Content %></p>
 <% }) %>
 
 </body>
